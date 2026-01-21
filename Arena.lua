@@ -2,69 +2,79 @@
 -- 🎮 ЗАМОРОЗКА ПЕРСОНАЖЕЙ
 -- ====================================
 
-local SCRIPT_VERSION = 1
-
 gg.setVisible(false)
 gg.clearResults()
 
 local monsters = {
     -- 🌪 ВЕТЕР
-    {id = 18613, search = "18613;2053", name = "🌪 Пеньчоль"},
-    {id = 18608, search = "18608;773", name = "🌪 Пеньчоль"},
-    {id = 13713, search = "13713;1024", name = "🌪 Художник ветра"},
-    {id = 13716, search = "13716;264", name = "🌪 Художник ветра"},
-    {id = 10513, search = "10513;1025", name = "🌪 Тритон"},
-    {id = 10508, search = "10508;774", name = "🌪 Тритон"},
-    {id = 13113, search = "13113;2304", name = "🌪 Один"},
-    {id = 12923, search = "12923;773", name = "🌪 Таранис"},
-    {id = 12938, search = "12938;1285", name = "🌪 Таранис"},
-    {id = 7813, search = "7813;1540", name = "🌪 Лео"},
-    {id = 9713, search = "9713;1028", name = "🌪 Тиана"},
+    {id = 18613, name = "🌪 Пеньчоль", element = "Ветер"},
+    {id = 18608, name = "🌪 Пеньчоль", element = "Ветер"},
+    {id = 13713, name = "🌪 Художник ветра", element = "Ветер"},
+    {id = 13716, name = "🌪 Художник ветра", element = "Ветер"},
+    {id = 10513, name = "🌪 Тритон", element = "Ветер"},
+    {id = 10508, name = "🌪 Тритон", element = "Ветер"},
+    {id = 13113, name = "🌪 Один", element = "Ветер"},
+    {id = 12923, name = "🌪 Таранис", element = "Ветер"},
+    {id = 12938, name = "🌪 Таранис", element = "Ветер"},
+    {id = 7813, name = "🌪 Лео", element = "Ветер"},
+    {id = 9713, name = "🌪 Тиана", element = "Ветер"},
+    {id = 15713, name = "🌪 Зен", element = "Ветер"},
+    {id = 12013, name = "🌪 Фэн Янь", element = "Ветер"},
     
     -- 🌊 ВОДА
-    {id = 15431, search = "15431;260", name = "🌊 Алия"},
-    {id = 15111, search = "15111;9", name = "🌊 Нана"},
-    {id = 11311, search = "11311;2055", name = "🌊 Бастет"},
-    {id = 14411, search = "14411;1285", name = "🌊 Мур"},
-    {id = 13911, search = "13911;512", name = "🌊 Рю"},
-    {id = 18131, search = "18131;771", name = "🌊 Парджанья"},
-    {id = 18136, search = "18136;773", name = "🌊 Парджанья"},
-    {id = 15711, search = "15711;1285", name = "🌊 Минато"},
-    {id = 6011, search = "6011;515", name = "🌊 Камилла"},
-    {id = 7811, search = "7811;1538", name = "🌊 Чоу"},
-    {id = 10012, search = "10012;1795", name = "🌊 Теомарс"},
-    {id = 12311, search = "12311;515", name = "🌊 Амелия"},
-    {id = 11911, search = "11911;1794", name = "🌊 Псамафа"},
-    {id = 12511, search = "12511;8", name = "🌊 Джозефина"},
-    {id = 12936, search = "12936;1283", name = "🌊 Абелио"},
-    {id = 21006, search = "21006;2053", name = "🌊 Ламелия"},
-    {id = 21011, search = "21011;774", name = "🌊 Ламелия"},
-    {id = 17006, search = "17006;2053", name = "🌊 Зибала"},
-    {id = 17011, search = "17011;774", name = "🌊 Зибала"},
+    {id = 15431, name = "🌊 Алия", element = "Вода"},
+    {id = 15111, name = "🌊 Нана", element = "Вода"},
+    {id = 11311, name = "🌊 Бастет", element = "Вода"},
+    {id = 14411, name = "🌊 Мур", element = "Вода"},
+    {id = 13911, name = "🌊 Рю", element = "Вода"},
+    {id = 18131, name = "🌊 Парджанья", element = "Вода"},
+    {id = 18136, name = "🌊 Парджанья", element = "Вода"},
+    {id = 15711, name = "🌊 Минато", element = "Вода"},
+    {id = 6011, name = "🌊 Камилла", element = "Вода"},
+    {id = 7811, name = "🌊 Чоу", element = "Вода"},
+    {id = 10012, name = "🌊 Теомарс", element = "Вода"},
+    {id = 12311, name = "🌊 Амелия", element = "Вода"},
+    {id = 11911, name = "🌊 Псамафа", element = "Вода"},
+    {id = 12511, name = "🌊 Джозефина", element = "Вода"},
+    {id = 12936, name = "🌊 Абелио", element = "Вода"},
+    {id = 21006, name = "🌊 Ламелия", element = "Вода"},
+    {id = 21011, name = "🌊 Ламелия", element = "Вода"},
+    {id = 17006, name = "🌊 Зибала", element = "Вода"},
+    {id = 17011, name = "🌊 Зибала", element = "Вода"},
     
     -- 🔥 ОГОНЬ
-    {id = 22412, search = "22412;772", name = "🔥 Джин Кадзима"},
-    {id = 22912, search = "22912;2052", name = "🔥 Кай"},
-    {id = 7912, search = "7912;1", name = "🔥 Мей Ху Ванг"},
-    {id = 7112, search = "7112;2052", name = "🔥 Джуно"},
-    {id = 3212, search = "3212;262", name = "🔥 Перна"},
-    {id = 6012, search = "6012;517", name = "🔥 Ванесса"},
-    {id = 15712, search = "15712;1541", name = "🔥 Рен"},
-    {id = 15707, search = "15707;261", name = "🔥 Рен"},
-    {id = 20812, search = "20812;2310", name = "🔥 Тэцуя"},
+    {id = 22412, name = "🔥 Джин Кадзима", element = "Огонь"},
+    {id = 22912, name = "🔥 Кай", element = "Огонь"},
+    {id = 7912, name = "🔥 Мей Ху Ванг", element = "Огонь"},
+    {id = 7112, name = "🔥 Джуно", element = "Огонь"},
+    {id = 3212, name = "🔥 Перна", element = "Огонь"},
+    {id = 6012, name = "🔥 Ванесса", element = "Огонь"},
+    {id = 15712, name = "🔥 Рен", element = "Огонь"},
+    {id = 15707, name = "🔥 Рен", element = "Огонь"},
+    {id = 20812, name = "🔥 Тэцуя", element = "Огонь"},
+    {id = 4207, name = "🔥 Ракан", element = "Огонь"},
     
     -- ☀️ СВЕТ
-    {id = 13414, search = "13414;516", name = "☀️ Люцифер"},
-    {id = 3214, search = "3214;263", name = "☀️ Элюд"},
-    {id = 12414, search = "12414;1030", name = "☀️ Элеонора"},
-    {id = 12419, search = "12419;1281", name = "☀️ Элеонора"},
-    
+    {id = 13414, name = "☀️ Люцифер", element = "Свет"},
+    {id = 3214, name = "☀️ Элюд", element = "Свет"},
+    {id = 12414, name = "☀️ Элеонора", element = "Свет"},
+    {id = 12419, name = "☀️ Элеонора", element = "Свет"},
+    {id = 6514, name = "☀️ Джулиан", element = "Свет"},
+    {id = 9414, name = "☀️ Нвегонг", element = "Свет"},
+    {id = 7214, name = "☀️ Лора", element = "Свет"},
+        
     -- 🌑 ТЬМА
-    {id = 11315, search = "11315;2305", name = "🌑 Нептис"},
-    {id = 7115, search = "7115;2055", name = "🌑 Киана"},
-    {id = 9716, search = "9716;1030", name = "🌑 Лидия"},
-    {id = 12415, search = "12415;1031", name = "🌑 Александра"},
-    {id = 12420, search = "12420;1282", name = "🌑 Александра"}
+    {id = 11315, name = "🌑 Нептис", element = "Тьма"},
+    {id = 7115, name = "🌑 Киана", element = "Тьма"},
+    {id = 9716, name = "🌑 Лидия", element = "Тьма"},
+    {id = 12415, name = "🌑 Александра", element = "Тьма"},
+    {id = 12420, name = "🌑 Александра", element = "Тьма"},
+    {id = 11415, name = "🌑 Амдуат", element = "Тьма"},
+    {id = 7815, name = "🌑 Рэгдолл", element = "Тьма"},
+    {id = 10015, name = "🌑 Веромосс", element = "Тьма"},
+    {id = 10010, name = "🌑 Веромосс", element = "Тьма"},
+    {id = 11910, name = "🌑 Никс", element = "Тьма"},
+    {id = 6315, name = "🌑 Фермион", element = "Тьма"}
 }
 
 local selected = {}
@@ -133,6 +143,47 @@ function showMonsterMenu()
     end
 end
 
+function findPatternForSkillID(skillID)
+    local foundAddresses = {}
+    
+    gg.searchNumber(skillID, gg.TYPE_DWORD)
+    local total = gg.getResultCount()
+    
+    if total == 0 then
+        return foundAddresses
+    end
+    
+    local results = gg.getResults(total)
+    
+    for i, res in ipairs(results) do
+        local checks = gg.getValues({
+            {address = res.address, flags = gg.TYPE_DWORD},
+            {address = res.address + 4, flags = gg.TYPE_DWORD},
+            {address = res.address + 8, flags = gg.TYPE_DWORD},
+            {address = res.address + 12, flags = gg.TYPE_DWORD}
+        })
+        
+        local v1, v2, v3, v4 = checks[1].value, checks[2].value, checks[3].value, checks[4].value
+        
+        if v1 == skillID 
+           and v2 == 0 
+           and v3 >= 10000000 and v3 <= 999999999
+           and v4 >= 1 and v4 <= 9999
+        then
+            table.insert(foundAddresses, {
+                address = res.address,
+                flags = gg.TYPE_DWORD,
+                value = 0,
+                freeze = true,
+                name = "ID" .. skillID .. "_PATTERN"
+            })
+        end
+    end
+    
+    gg.clearResults()
+    return foundAddresses
+end
+
 function freezeSelectedMonsters()
     local targets = {}
     for i = 1, #monsters do
@@ -143,30 +194,28 @@ function freezeSelectedMonsters()
     
     local totalFound = 0
     local foundAddresses = {}
+    local monsterStats = {}
     
+    -- Собираем статистику по стихиям и монстрам
     for idx, monster in ipairs(targets) do
-        gg.clearResults()
-        gg.searchNumber(monster.search, gg.TYPE_DWORD)
+        local skillID = monster.id
+        local patternAddresses = findPatternForSkillID(skillID)
         
-        local results = gg.getResults(100)  -- ← ИЗМЕНЕНО: было 2000, стало 100
-        
-        local foundForThisMonster = 0
-        
-        for _, v in ipairs(results) do
-            if v.value == monster.id then
-                foundForThisMonster = foundForThisMonster + 1
-                
-                local addressInfo = {
-                    address = v.address,
-                    flags = gg.TYPE_DWORD,
-                    value = 0,
-                    freeze = true,
-                    name = monster.name
-                }
-                
-                table.insert(foundAddresses, addressInfo)
-                totalFound = totalFound + 1
+        if #patternAddresses > 0 then
+            -- Инициализируем таблицы для стихии и монстра
+            if not monsterStats[monster.element] then
+                monsterStats[monster.element] = {}
             end
+            if not monsterStats[monster.element][monster.name] then
+                monsterStats[monster.element][monster.name] = 0
+            end
+            monsterStats[monster.element][monster.name] = monsterStats[monster.element][monster.name] + #patternAddresses
+        end
+        
+        for _, addr in ipairs(patternAddresses) do
+            addr.name = monster.name
+            table.insert(foundAddresses, addr)
+            totalFound = totalFound + 1
         end
     end
     
@@ -175,20 +224,31 @@ function freezeSelectedMonsters()
         return
     end
     
+    -- Порядок стихий для сортировки
+    local elementOrder = {
+        "Ветер",
+        "Вода", 
+        "Огонь",
+        "Свет",
+        "Тьма"
+    }
+    
+    -- Создаем сообщение с группировкой по стихиям
     local confirmMsg = "БУДУТ ЗАМОРОЖЕНЫ:\n\n"
-    for _, monster in ipairs(targets) do
-        local count = 0
-        for _, item in ipairs(foundAddresses) do
-            if item.name == monster.name then
-                count = count + 1
+    local hasElements = false
+    
+    for _, element in ipairs(elementOrder) do
+        if monsterStats[element] then
+            hasElements = true
+            confirmMsg = confirmMsg .. element .. ":\n"
+            for name, count in pairs(monsterStats[element]) do
+                confirmMsg = confirmMsg .. "  • " .. name .. ": " .. count .. " адр.\n"
             end
-        end
-        if count > 0 then
-            confirmMsg = confirmMsg .. "• " .. monster.name .. ": " .. count .. " адр.\n"
+            confirmMsg = confirmMsg .. "\n"
         end
     end
     
-    confirmMsg = confirmMsg .. "\nВсего: " .. totalFound .. " адресов"
+    confirmMsg = confirmMsg .. "Всего: " .. totalFound .. " адресов"
     
     local confirm = gg.alert(confirmMsg, "ЗАМОРОЗИТЬ", "ОТМЕНА")
     
@@ -210,23 +270,22 @@ function freezeSelectedMonsters()
         gg.setValues({item})
     end
     
+    -- Создаем отчет с группировкой по стихиям
     local report = "ЗАМОРОЗКА ВЫПОЛНЕНА!\n\n"
-    for _, monster in ipairs(targets) do
-        local count = 0
-        for _, item in ipairs(foundAddresses) do
-            if item.name == monster.name then
-                count = count + 1
+    
+    for _, element in ipairs(elementOrder) do
+        if monsterStats[element] then
+            report = report .. element .. ":\n"
+            for name, count in pairs(monsterStats[element]) do
+                report = report .. "  " .. name .. ": " .. count .. "\n"
             end
-        end
-        if count > 0 then
-            report = report .. monster.name .. ": " .. count .. "\n"
+            report = report .. "\n"
         end
     end
     
-    report = report .. "\nИТОГО: " .. totalFound .. " адресов"
+    report = report .. "ИТОГО: " .. totalFound .. " адресов"
     
     gg.alert(report)
 end
 
 showMonsterMenu()
-
