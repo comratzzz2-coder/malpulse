@@ -63,7 +63,7 @@ local monsters = {
     {id = 11315, search = "11315;2305", name = "🌑 Нептис"},
     {id = 7115, search = "7115;2055", name = "🌑 Киана"},
     {id = 9716, search = "9716;1030", name = "🌑 Лидия"},
-    {id = 12145, search = "12145;1031", name = "🌑 Александра"},
+    {id = 12415, search = "12415;1031", name = "🌑 Александра"},
     {id = 12420, search = "12420;1282", name = "🌑 Александра"}
 }
 
@@ -229,3 +229,4 @@ function freezeSelectedMonsters()
 end
 
 showMonsterMenu()
+
