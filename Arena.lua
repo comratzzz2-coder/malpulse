@@ -303,3 +303,4 @@ function freezeSelectedMonsters()
 end
 
 showMonsterMenu()
+
