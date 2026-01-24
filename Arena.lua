@@ -98,6 +98,7 @@ local monsters = {
     {id = 16715, name = "🌑 Жизель", element = "Тьма"},
     {id = 15110, name = "🌑 Кики", element = "Тьма"},
     {id = 15115, name = "🌑 Кики", element = "Тьма"},
+    {id = 4215, name = "🌑 Зерату", element = "Тьма"},
     {id = 6315, name = "🌑 Фермион", element = "Тьма"}
 }
 
@@ -313,6 +314,7 @@ function freezeSelectedMonsters()
 end
 
 showMonsterMenu()
+
 
 
 
