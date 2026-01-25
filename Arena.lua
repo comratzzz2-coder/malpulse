@@ -86,6 +86,7 @@ local monsters = {
     {id = 7509, name = "☀️ Хальпас", element = "Свет"},
     {id = 7514, name = "☀️ Хальпас", element = "Свет"},
     {id = 6014, name = "☀️ Акрома", element = "Свет"},
+    {id = 14609, name = "☀️ Крэйг", element = "Свет"},
     {id = 14614, name = "☀️ Крэйг", element = "Свет"},
         
     -- 🌑 ТЬМА
@@ -324,6 +325,7 @@ function freezeSelectedMonsters()
 end
 
 showMonsterMenu()
+
 
 
 
