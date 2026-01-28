@@ -90,6 +90,8 @@ local monsters = {
     {id = 6014, name = "☀️ Акрома", element = "Свет"},
     {id = 14609, name = "☀️ Крэйг", element = "Свет"},
     {id = 14614, name = "☀️ Крэйг", element = "Свет"},
+    {id = 18609, name = "🌑 Ыльдонг", element = "Свет"},
+    {id = 18614, name = "🌑 Ыльдонг", element = "Свет"},
         
     -- 🌑 ТЬМА
     {id = 11315, name = "🌑 Нептис", element = "Тьма"},
@@ -120,9 +122,6 @@ local monsters = {
     {id = 7215, name = "🌑 Ники", element = "Тьма"},
     {id = 12210, name = "🌑 Vivachel", element = "Тьма"},
     {id = 12215, name = "🌑 Vivachel", element = "Тьма"},
-    {id = 18609, name = "🌑 Ыльдонг", element = "Тьма"},
-    {id = 18614, name = "🌑 Ыльдонг", element = "Тьма"},
-    {id = 6310, name = "🌑 Фермион", element = "Тьма"},
     {id = 6315, name = "🌑 Фермион", element = "Тьма"}
 }
 
@@ -338,6 +337,7 @@ function freezeSelectedMonsters()
 end
 
 showMonsterMenu()
+
 
 
 
