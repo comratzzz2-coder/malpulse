@@ -28,6 +28,7 @@ local monsters = {
     {id = 13613, name = "🌪 Саванна", element = "Ветер"},
     {id = 13618, name = "🌪 Саванна", element = "Ветер"},
     {id = 21013, name = "🌪 Орфина", element = "Ветер"},
+    {id = 23708, name = "🌪 Гендальф", element = "Ветер"},
     
     -- 🌊 ВОДА
     {id = 15431, name = "🌊 Алия", element = "Вода"},
@@ -54,6 +55,7 @@ local monsters = {
     {id = 17011, name = "🌊 Зибала", element = "Вода"},
     {id = 16706, name = "🌊 Манон", element = "Вода"},
     {id = 16711, name = "🌊 Манон", element = "Вода"},
+    {id = 23706, name = "🌊 Гендальф", element = "Вода"},
     
     -- 🔥 ОГОНЬ
     {id = 22412, name = "🔥 Джин Кадзима", element = "Огонь"},
@@ -71,6 +73,8 @@ local monsters = {
     {id = 18127, name = "🔥 Вендан", element = "Огонь"},
     {id = 18132, name = "🔥 Вендан", element = "Огонь"},
     {id = 18137, name = "🔥 Вендан", element = "Огонь"},
+    {id = 23707, name = "🔥 Гендальф", element = "Огонь"},
+    {id = 23712, name = "🔥 Гендальф", element = "Огонь"},
     
     -- ☀️ СВЕТ
     {id = 13414, name = "☀️ Люцифер", element = "Свет"},
@@ -93,6 +97,8 @@ local monsters = {
     {id = 14614, name = "☀️ Крэйг", element = "Свет"},
     {id = 18609, name = "☀️ Ыльдонг", element = "Свет"},
     {id = 18614, name = "☀️ Ыльдонг", element = "Свет"},
+    {id = 23709, name = "☀️ Гендальф", element = "Свет"},
+    {id = 23714, name = "☀️ Гендальф", element = "Свет"},
         
     -- 🌑 ТЬМА
     {id = 11310, name = "🌑 Нептис", element = "Тьма"},
@@ -126,7 +132,8 @@ local monsters = {
     {id = 12210, name = "🌑 Vivachel", element = "Тьма"},
     {id = 12215, name = "🌑 Vivachel", element = "Тьма"},
     {id = 6310, name = "🌑 Фермион", element = "Тьма"},
-    {id = 6315, name = "🌑 Фермион", element = "Тьма"}
+    {id = 6315, name = "🌑 Фермион", element = "Тьма"},
+    {id = 23710, name = "🌑 Гендальф", element = "Тьма"}
 }
 
 local selected = {}
