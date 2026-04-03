@@ -7,7 +7,7 @@ gg.clearResults()
 
 local monsters = {
     -- 🌪 ВЕТЕР
-    {id = 18613, name = "🌪 Пеньчоль", element = "Ветер"},
+    sssss{id = 18613, name = "🌪 Пеньчоль", element = "Ветер"},
     {id = 18608, name = "🌪 Пеньчоль", element = "Ветер"},
     {id = 13713, name = "🌪 Художник ветра", element = "Ветер"},
     {id = 13716, name = "🌪 Художник ветра", element = "Ветер"},
